@@ -15,6 +15,18 @@ For a given algorithm, the time taken to execute it and the size of data input i
 - Time Complexity is the amount of time the algorithm requires to run from start to finish.
   - The formula used for this time requirement can be represented as `T(n) = c * n` for a program of input size `n`.
 
+## Common Big-O functions
+
+| Name | Big O |
+| ------|------ |
+| Constant | O(c) |
+| Linear | O(n) |
+| Quadratic | O(n^2) |
+| Cubic | O(n^3) |
+| Exponential | O(2^n) |
+| Logarithmic | O(log(n)) |
+| Log Linear | O(n log(n))
+
 ## Problem Solving Approaches
 
 - `Divide and conquer`: Split a problem into sub-problems, break these further to the smallest possible, then solve and merge them into the final solution.

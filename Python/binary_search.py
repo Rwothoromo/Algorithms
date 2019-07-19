@@ -65,9 +65,36 @@ print(binary_search(sorted_list, 45))
 print(binary_search_recursive(sorted_list, 0, 8, 10))
 print(binary_search_recursive(sorted_list, 0, 8, 99))
 
-# Binary search is faster than linear search except for small arrays, but the array must be sorted first.
-# Space Complexity is O(n)
-# Worst case space complexity is O(1)
-# Best case performance is O(1)
-# Average case performance is O(log n)
-# Worst case performance is O(log n)
+# Binary search, O(log n), is faster than linear search except for small arrays, but the array must be sorted first.
+# Best case : O(1)
+# Average case : O(log n)
+# Worst case : O(log n)
+# O(log n) is actually very good!!!
+# Any algorithm that cuts the problem in half each time is O(log n)
+
+# The concern here is the number of steps it will take to possibly reach/find the sought-after value
+# If the list has:
+# a) 2 elements, split 1 time and there's only 1 element to look at
+# b) 4 elements, split 2 times
+# c) 8 elements, split 3 times
+# d) 16 elements, split 4 times
+# e) 32 elements, split 5 times
+# The split-count increases by 1 as the number of elements doubles
+
+# So, for a sorted list of n elements, the items pending checking for each comparison are:
+# a) 1 comparison, n/2 items
+# b) 2 comparisons, n/4 items
+# c) 3 comparisons, n/8 items
+# d) 4 comparisons, n/16 items
+# e) 5 comparisons, n/32 items
+# Basically, for 32 items, 32 = 2^5, hence 5 steps are taken
+# That is, raise 2 to the power of the number of steps
+# Logarithms are the inverse of exponential functions,
+# The inverse of y = 2^x is y = log base 2 of x
+# For 32 items, log n = log 32 = log 2^5
+# To get to one item in a list of 32, 1 = 32/32 = 32 * 1/(2^5)
+# That is, 1 = n * 1/(2^x), so n = 2^x, which is log base 2 of n = x
+
+# As n doubles, the algorithm will take extra time (t) to run.
+# t does not double but increases by a constant amount,
+# and won't cause worry for larger values of n

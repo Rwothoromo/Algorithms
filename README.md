@@ -14,6 +14,7 @@ For a given algorithm, the time taken to execute it and the size of data input i
 
 - Time Complexity is the amount of time the algorithm requires to run from start to finish.
   - The formula used for this time requirement can be represented as `T(n) = c * n` for a program of input size `n`.
+  - The Big-0 of an algorithm is how it performs in the Worst cae (say, for search, the element sought is missing).
 
 ## Common Big-O functions
 

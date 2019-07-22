@@ -60,13 +60,14 @@ def binary_search_recursive(sorted_list, first_index, last_index, sought_value):
 sorted_list = [1, 3, 5, 7, 8, 10, 22, 45, 87]
 
 # results
-print(binary_search(sorted_list, 6))
-print(binary_search(sorted_list, 45))
-print(binary_search_recursive(sorted_list, 0, 8, 10))
-print(binary_search_recursive(sorted_list, 0, 8, 99))
+print(binary_search(sorted_list, 6))  # None
+print(binary_search(sorted_list, 45))  # 7
+print(binary_search_recursive(sorted_list, 0, 8, 10))  # 5
+print(binary_search_recursive(sorted_list, 0, 8, 99))  # None
 
 # Binary search, O(log n), is faster than linear search except for small arrays, but the array must be sorted first.
-# Best case (space complexity) : O(1) Note that this is more if recursion is opted for above.
+# Worst case (space complexity) : O(1) Note that this can be more if recursion is opted for above.
+# Best case : O(1) (if sought value is the middle element compared with at the start)
 # Average case : O(log n)
 # Worst case : O(log n)
 # O(log n) is actually very good!!!

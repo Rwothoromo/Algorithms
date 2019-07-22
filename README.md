@@ -34,6 +34,9 @@ For a given algorithm, the time taken to execute it and the size of data input i
 - `Conquer/Solve`: Take in small sub-problems to be solved. These problems are basically already solved on their own.
 - `Merge/Combine`: Recursively combine the solved sub-problems (from `Conquer/Solve`) into the solution of the original problem.
 
-## Python
+## Search
 
-1. [Binary Search](Python/binary_search.py) or implementation [as a class](https://github.com/Rwothoromo/andela_labs/blob/master/binary_search/binary_search.py).
+### Python
+
+1. [Binary Search](search/Python/binary.py) or implementation [as a class](https://github.com/Rwothoromo/andela_labs/blob/master/binary_search/binary_search.py).
+2. [Linear Search](search/Python/linear.py)

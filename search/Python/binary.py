@@ -66,7 +66,7 @@ print(binary_search_recursive(sorted_list, 0, 8, 10))
 print(binary_search_recursive(sorted_list, 0, 8, 99))
 
 # Binary search, O(log n), is faster than linear search except for small arrays, but the array must be sorted first.
-# Best case : O(1)
+# Best case (space complexity) : O(1) Note that this is more if recursion is opted for above.
 # Average case : O(log n)
 # Worst case : O(log n)
 # O(log n) is actually very good!!!

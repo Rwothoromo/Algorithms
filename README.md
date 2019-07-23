@@ -37,18 +37,8 @@ For a given algorithm, the time taken to execute it and the size of data input i
 
 ## Search
 
-- Python
-
-  1. [Binary](search/Python/binary.py) or implementation [as a class](https://github.com/Rwothoromo/andela_labs/blob/master/binary_search/binary_search.py).
-  2. [Linear](search/Python/linear.py).
-  3. [Interpolation](search/Python/interpolation.py).
+- [Python](https://github.com/Rwothoromo/Algorithms/tree/python/search)
 
 ## Sort
 
-- Python
-
-  1. [Bubble](sort/Python/bubble.py).
-  2. [Insertion](sort/Python/insertion.py).
-  3. [Selection](sort/Python/selection.py).
-  4. [Heap](sort/Python/heap.py).
-  5. [Quick](sort/Python/quick.py).
+- [Python](https://github.com/Rwothoromo/Algorithms/tree/python/sort)

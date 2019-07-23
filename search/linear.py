@@ -1,6 +1,8 @@
 """
 By going through each item in a data structure till the sought item is found,
 a Linear search is performed. It is of course, rarely used because it's inefficient.
+
+It only beats Binary search and hash tables at short lists.
 """
 
 

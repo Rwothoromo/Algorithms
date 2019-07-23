@@ -2,7 +2,7 @@
 Bubble/Sinking Sort repeatedly steps through a list, compares adjacent pairs
 and swaps them if they are not in the right order.
 That is, each item bubbles up to where it belongs.
-It is rather slow except if the least is mostly sorted.
+It is rather slow except if the list is mostly sorted.
 """
 
 

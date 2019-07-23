@@ -4,6 +4,10 @@ The first step is to compare the provided value with the element in the middle o
 If there is a match, the search comes to an end, otherwise, work with one half of the list.
 The selected half is more comparable to the sought value than the other.
 Implemented recursively.
+
+Hash tables (data structure), can be searched more efficiently than binary search.
+However, Binary search can solve finding the next-smallest or next-largest element in the array 
+relative to the target even if it is absent from the array.
 """
 
 

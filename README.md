@@ -1,6 +1,7 @@
 # Algorithms in Python
 
 Implementations of and explanations for a number of Algorithms in Python.
+To run one, type `python <path-to-file.py>`.
 
 ## Search
 

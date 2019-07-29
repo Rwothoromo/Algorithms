@@ -67,23 +67,17 @@ def max_heapify(data, heap_size, index_sub_tree):
 def heap_sort(data):
     heap_size = len(data)
 
-    # create a max heap
     # loop indices in reverse
-    # heapify at each index/sub-tree
     for i in range(heap_size, -1, -1):
-        # deal with the lowest nodes first
         max_heapify(data, heap_size, index_sub_tree=i)
         # print(data, 'heapified')
 
     # loop indices in reverse
-    # perform a swap with the 1st element in the heap for each element
-    # heapify after each swap
-    # print(data, 'after first run')
     for i in range(heap_size-1, 0, -1):
-        # swap the 1st and last node, and remove the last node from the heap
+        # swap the last node and the max, and remove the max node from the heap
         data[i], data[0] = data[0], data[i]
 
-        # create a max heap from the new/reduced array
+        # create a max heap from the new/reduced array/heap
         max_heapify(data, heap_size=i, index_sub_tree=0)
         # print(data, 'swapped and heapified', i)
 
@@ -114,7 +108,7 @@ print(heap_sort(data))  # [11, 12, 22, 25, 34, 64, 90]
 # 2. For the 2nd for-loop
 
 # i = 6
-# swap the 1st and last node, and remove the last node from the heap
+# swap the last node and the max, and remove the max node from the heap
 # data[i], data[0] = data[0], data[i]
 # so (25, 90) = (90, 25) reflects into
 #
@@ -127,7 +121,7 @@ print(heap_sort(data))  # [11, 12, 22, 25, 34, 64, 90]
 # [64, 34, 25, 12, 22, 11, 90]
 
 # i = 5
-# swap the 1st and last node, and remove the last node from the heap
+# swap the last node and the max, and remove the max node from the heap
 # data[i], data[0] = data[0], data[i]
 # so (11, 64) = (64, 11) reflects into
 #
@@ -140,7 +134,7 @@ print(heap_sort(data))  # [11, 12, 22, 25, 34, 64, 90]
 # [34, 22, 25, 12, 11, 64, 90]
 
 # i = 4
-# swap the 1st and last node, and remove the last node from the heap
+# swap the last node and the max, and remove the max node from the heap
 # data[i], data[0] = data[0], data[i]
 # so (11, 34) = (34, 11) reflects into
 #
@@ -153,7 +147,7 @@ print(heap_sort(data))  # [11, 12, 22, 25, 34, 64, 90]
 # [25, 22, 11, 12, 34, 64, 90]
 
 # i = 3
-# swap the 1st and last node, and remove the last node from the heap
+# swap the last node and the max, and remove the max node from the heap
 # data[i], data[0] = data[0], data[i]
 # so (12, 25) = (25, 12) reflects into
 #
@@ -164,7 +158,7 @@ print(heap_sort(data))  # [11, 12, 22, 25, 34, 64, 90]
 # [22, 12, 11, 25, 34, 64, 90]
 
 # i = 2
-# swap the 1st and last node, and remove the last node from the heap
+# swap the last node and the max, and remove the max node from the heap
 # data[i], data[0] = data[0], data[i]
 # so (11, 22) = (22, 11) reflects into
 #
@@ -175,7 +169,7 @@ print(heap_sort(data))  # [11, 12, 22, 25, 34, 64, 90]
 # [12, 11, 22, 25, 34, 64, 90]
 
 # i = 1
-# swap the 1st and last node, and remove the last node from the heap
+# swap the last node and the max, and remove the max node from the heap
 # data[i], data[0] = data[0], data[i]
 # so (11, 12) = (12, 11) reflects into
 #
@@ -184,5 +178,7 @@ print(heap_sort(data))  # [11, 12, 22, 25, 34, 64, 90]
 # [11, 12, 22, 25, 34, 64, 90]
 
 # Complexity
-# Space complexity is O(1) and it sorts in place
-# If the heap has to be built during heapification, it takes O(n) at worst
+# When heapifying, to move from the top node to the sub node,
+# 2 comparisons are made giving O(2 * log n), which is O(log n) for Time Complexity
+# The number of recursive calls made equates to the number of levels (3 above)
+# Space complexity is O(3 * log n), which is O(log n) as well.

@@ -57,8 +57,63 @@ def quick_sort(data, low_index, high_index):
 
 
 # list to sort
-data = [64, 34, 25, 12, 22, 11, 90]
+data = [64, 90, 25, 12, 22, 11, 34]
 
 # results
 n = len(data)
 print(quick_sort(data, 0, n-1))  # [11, 12, 22, 25, 34, 64, 90]
+
+# How it works
+
+# 1. partition() function runs for O(n)
+# if data = [64, 90, 25, 12, 22, 11, 34], low_index = 0, high_index = 6
+# then index_smaller = -1, pivot = 34
+
+# i = 0, data[i] = 64, data[i] <= pivot so index_smaller = 0
+# swap (64, 64) = (64, 64)
+# [64, 90, 25, 12, 22, 11, 34]
+
+# i = 1, data[i] = 90, data[i] > pivot
+
+# i = 2, data[i] = 25, data[i] <= pivot so index_smaller = 1
+# swap (90, 25) = (25, 90)
+# [64, 25, 90, 12, 22, 11, 34]
+
+# i = 3, data[i] = 12, data[i] <= pivot so index_smaller = 2
+# swap (90, 12) = (12, 90)
+# [64, 25, 12, 90, 22, 11, 34]
+
+# i = 4, data[i] = 22, data[i] <= pivot so index_smaller = 3
+# swap (90, 22) = (22, 90)
+# [64, 25, 12, 22, 90, 11, 34]
+
+# i = 5, data[i] = 11, data[i] <= pivot so index_smaller = 4
+# swap (90, 11) = (11, 90)
+# [64, 25, 12, 22, 11, 90, 34]
+
+# outside the for-loop
+# data[5], data[6] = data[6], data[5]
+# swap (90, 34) = (34, 90)
+# [64, 25, 12, 22, 11, 34, 90]
+
+
+# 2. quick_sort() function
+# pivot_index = 4, pivot = 34
+# [25, 12, 22, 11, 34, 90, 64])
+
+# pivot_index = 0, pivot = 25
+# [11, 12, 22, 25, 34, 90, 64]
+
+# pivot_index = 3, pivot = 25
+# [11, 12, 22, 25, 34, 90, 64]
+
+# pivot_index = 2, pivot = 22
+# [11, 12, 22, 25, 34, 90, 64]
+
+# pivot_index = 5, pivot = 90
+# [11, 12, 22, 25, 34, 64, 90]
+
+# Complexity
+# Worst case - O(n^2) when greatest or smallest element is the pivot
+# Best case - O(n * log n) when the middle element is selected
+# Average case - O(n * log n)
